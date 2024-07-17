@@ -1,0 +1,46 @@
+{
+  "annotations": {
+    "changelogDate": "20240717021113"
+  },
+  "applications": ["gateway", "DuongSu"],
+  "clientRootFolder": "DuongSu",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idCauHinh",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "noiDung",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "javascript",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "css",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idLoaiDs",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "microserviceName": "DuongSu",
+  "name": "CauHinhThongTinDuongSu",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20240717020913"
+  },
+  "applications": ["gateway", "DuongSu"],
+  "clientRootFolder": "DuongSu",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idLoaiDs",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dienGiai",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "strSearch",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "microserviceName": "DuongSu",
+  "name": "DanhMucLoaiDuongSu",
+  "relationships": [
+    {
+      "otherEntityName": "duongSu",
+      "otherEntityRelationshipName": "idLoaiDs",
+      "relationshipName": "duongSu",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}
