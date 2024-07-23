@@ -13,7 +13,8 @@ jib {
         }
     }
     to {
-        image = "duongsu:latest"
+        image = "localhost:5000/duongsu:latest"
+        allowInsecureRegistries = true
     }
     container {
         entrypoint = ["bash", "-c", "/entrypoint.sh"]

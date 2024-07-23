@@ -5,6 +5,7 @@
     "authenticationType": "jwt",
     "baseName": "DuongSu",
     "buildTool": "gradle",
+    "creationTimestamp": 1721701486146,
     "devDatabaseType": "h2Disk",
     "entities": [
       "DuongSu",
@@ -21,7 +22,7 @@
     "jhipsterVersion": "8.6.0",
     "jwtSecretKey": "MzgzMjY4ZmY1OWIwNzM1ZWZkYzczMzBkNTRkZDE5NjZkMWU3YzcyMDMwZjBjODgwMDM2YTc1ZWIzNzc0OTRlYTRlYWI2YTEyODI5ZmJiMGVhMWYxMTUyOGI0MDUzYmE5ZjJhOThjYzc0Y2I1NTBlNDU1MmFmZTM0M2UzMTY3NDY=",
     "languages": ["en"],
-    "lastLiquibaseTimestamp": 1721182513000,
+    "lastLiquibaseTimestamp": 1721701496000,
     "nativeLanguage": "en",
     "packageFolder": "vn/vnpt",
     "packageName": "vn.vnpt",

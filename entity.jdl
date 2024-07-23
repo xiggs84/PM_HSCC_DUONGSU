@@ -1,0 +1,108 @@
+entity TinhTrangDuongSu {
+    idTinhTrang Long
+    dienGiai String
+    idLoaiDs Long
+}
+entity DanhMucLoaiDuongSu {
+    idLoaiDs Long
+    dienGiai String
+    trangThai Long
+    strSearch String
+}
+entity DuongSu {
+    idDuongSu Long
+    tenDuongSu String
+    diaChi String
+    trangThai Long
+    thongTinDs String
+    ngayThaoTac LocalDate
+    nguoiThaoTac Long
+    idDsGoc Long
+    idMaster String
+    idDonVi Long
+    strSearch String
+    soGiayTo String
+    idLoaiNganChan Long
+    syncStatus Long
+}
+
+entity CauHinhThongTinDuongSu {
+    idCauHinh Long
+    noiDung String
+    javascript String
+    css String
+    idLoaiDs Long
+    idDonVi Long
+    trangThai Long
+}
+
+entity QuanHeDuongSu {
+    idDuongSu Long
+    idDuongSuQh Long
+    idQuanHe Long
+    thongTinQuanHe String
+    trangThai Long
+}
+
+entity DuongSuTrungCmnd {
+    idDuongSu Long
+    tenDuongSu String
+    idLoaiDs Long
+    diaChi String
+    trangThai Long
+    thongTinDs String
+    ngayThaoTac LocalDate
+    nguoiThaoTac Long
+    idDsGoc Long
+    idTinhTrang Long
+    idMaster String
+    idDonVi Long
+    strSearch String
+    soGiayTo String
+    idDuongSuMin Long
+    idMasterMin Long
+    idDuongSuMax Long
+    idMasterMax Long
+}
+
+entity DanhSachDuongSu {
+    idDuongSu Long
+    tenDuongSu String
+    idLoaiDs Long
+    diaChi String
+    trangThai Long
+    ngayThaoTac LocalDate
+    nguoiThaoTac Long
+    idDsGoc Long
+    idTinhTrang Long
+    idMaster String
+    idDonVi Long
+    strSearch String
+    soGiayTo String
+    idLoaiNganChan Long
+}
+
+entity DanhMucTinhTrangHonNhan {
+    idTinhTrang Long
+    dienGiai String
+    trangThai Long
+}
+
+entity QuanHeMaster {
+    idDuongSu Long
+    idDuongSuQh Long
+}
+
+entity QuanHeNhanThan {
+    idQuanHe Long
+    dienGiai String
+    idQuanHeDoiUng Long
+    idGioiTinh Long
+}
+
+relationship OneToMany {
+    DanhMucLoaiDuongSu to DuongSu{idLoaiDs}
+}
+paginate * with pagination
+service * with serviceClass
+dto * with mapstruct

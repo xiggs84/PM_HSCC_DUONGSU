@@ -1,8 +1,8 @@
 {
   "annotations": {
-    "changelogDate": "20240717020913"
+    "changelogDate": "20240723022450"
   },
-  "applications": ["gateway", "DuongSu"],
+  "applications": "*",
   "clientRootFolder": "DuongSu",
   "databaseType": "sql",
   "dto": "mapstruct",
@@ -24,9 +24,9 @@
       "fieldType": "String"
     }
   ],
-  "jpaMetamodelFiltering": true,
   "microserviceName": "DuongSu",
   "name": "DanhMucLoaiDuongSu",
+  "pagination": "pagination",
   "relationships": [
     {
       "otherEntityName": "duongSu",
@@ -37,6 +37,5 @@
     }
   ],
   "searchEngine": "no",
-  "service": "serviceImpl",
-  "skipServer": true
+  "service": "serviceClass"
 }
