@@ -1,6 +1,8 @@
 package vn.vnpt.service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -108,5 +110,15 @@ public class DuongSuService {
     public void delete(Long id) {
         log.debug("Request to delete DuongSu : {}", id);
         duongSuRepository.deleteById(id);
+    }
+
+    @Transactional(readOnly = true)
+    public List<DuongSuDTO> findByTenDuongSu(String tenDuongSu) {
+        log.debug("Request to search DuongSus by tenDuongSu : {}", tenDuongSu);
+        return duongSuRepository
+            .findByTenDuongSuContainingIgnoreCase(tenDuongSu)
+            .stream()
+            .map(duongSuMapper::toDto)
+            .collect(Collectors.toList());
     }
 }

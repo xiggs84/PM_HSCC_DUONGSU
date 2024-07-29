@@ -174,4 +174,11 @@ public class DuongSuResource {
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
             .build();
     }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<DuongSuDTO>> searchDuongSusByTenDuongSu(@RequestParam String tenDuongSu) {
+        log.debug("REST request to search DuongSus by tenDuongSu : {}", tenDuongSu);
+        List<DuongSuDTO> result = duongSuService.findByTenDuongSu(tenDuongSu);
+        return ResponseEntity.ok().body(result);
+    }
 }
